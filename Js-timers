@@ -1,0 +1,33 @@
+function countdown(num) {
+  let timerFunc = setInterval(() => {
+    num--;
+    if (num === 0) {
+      console.log("Done");
+      clearInterval(timerFunc);
+    } else {
+      console.log(num);
+    }
+  }, 1000);
+}
+countdown(4);
+
+
+
+
+
+
+function randomGame() {
+  let counter = 0;
+  let timerFunc = setInterval(() => {
+    let randNum = Math.random();
+    counter++;
+    if (randNum > 0.75) {
+      //   console.log(randNum);
+      console.log(
+        `It took ${counter} tries before we found a number greater than 0.75`
+      );
+      clearInterval(timerFunc);
+    }
+  }, 1000);
+}
+randomGame();
